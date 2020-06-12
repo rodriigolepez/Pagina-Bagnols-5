@@ -137,3 +137,43 @@ var return_btn = document.getElementById("returntocalc");
 return_btn.onclick = function() {
   change_view(2);
 }
+
+
+// Botones de banner
+var popupimg = document.getElementById("popupimage");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var tablero1 = document.getElementById("tablero1");
+var tablero2 = document.getElementById("tablero2");
+var tablero3 = document.getElementById("tablero3");
+var tablero4 = document.getElementById("tablero4");
+var image = document.getElementById("img");
+var captionText = document.getElementById("caption");
+tablero1.onclick = function(){
+  popupimg.style.display = "block";
+  image.src = "img/MUESTRARIO-DE-MN-1.JPG";
+  captionText.innerHTML = this.alt;
+}
+tablero2.onclick = function(){
+  popupimg.style.display = "block";
+  image.src = "img/MUESTRARIO-DISTRI-2.JPG";
+  captionText.innerHTML = this.alt;
+}
+tablero3.onclick = function(){
+  popupimg.style.display = "block";
+  image.src = "img/MUESTRARIO-DISTRI-3.JPG";
+  captionText.innerHTML = this.alt;
+}
+tablero4.onclick = function(){
+  popupimg.style.display = "block";
+  image.src = "img/MUESTRARIO-DISTRI-4.JPG";
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closeimg")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  popupimg.style.display = "none";
+}
